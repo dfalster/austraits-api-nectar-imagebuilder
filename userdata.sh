@@ -2,7 +2,7 @@
 
 # DPkg::Lock::Timeout should work around apt lock race condition at startup ...
 # (see https://blog.sinjakli.co.uk/2021/10/25/waiting-for-apt-locks-without-the-hacky-bash-scripts/)
-apt_opts="-o DPkg::Lock::Timeout=60 -q2"
+apt_opts="-o DPkg::Lock::Timeout=60 -qq"
 # ... but this hack still seems necessary
 sleep 10
 
