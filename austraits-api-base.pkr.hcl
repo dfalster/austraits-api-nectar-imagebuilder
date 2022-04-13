@@ -26,6 +26,11 @@ source "openstack" "austraits-api-base" {
 build {
     sources = ["source.openstack.austraits-api-base"]
 
+    provisioner "file" {
+        source = "packages.txt"
+        destination = "/tmp/packages.txt"
+    }
+
     provisioner "shell" {
         scripts = ["userdata.sh"]
     }

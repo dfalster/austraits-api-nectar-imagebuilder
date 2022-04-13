@@ -1,0 +1,16 @@
+r-base
+r-cran-plumber
+r-cran-remotes
+r-cran-refmanager
+r-cran-dplyr
+r-cran-tidyr
+r-cran-rlang
+r-cran-purrr
+r-cran-tidyselect
+r-cran-assertthat
+r-cran-stringr
+r-cran-jsonlite
+r-cran-httr
+r-cran-magrittr
+r-cran-readr
+r-cran-yaml

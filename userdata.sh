@@ -21,11 +21,8 @@ sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_
 sudo add-apt-repository -y ppa:c2d4u.team/c2d4u4.0+
 
 sudo apt-get update $apt_opts
-sudo apt-get install $apt_opts --no-install-recommends \
-    r-base r-cran-plumber r-cran-remotes \
-    r-cran-refmanager r-cran-dplyr r-cran-tidyr r-cran-rlang r-cran-purrr \
-    r-cran-tidyselect r-cran-assertthat r-cran-stringr r-cran-jsonlite \
-    r-cran-httr r-cran-magrittr r-cran-readr r-cran-yaml
+sudo apt-get install $apt_opts --no-install-recommends `cat /tmp/packages.txt`
+rm /tmp/packages.txt
 
 sudo apt-get remove $apt_opts unattended-upgrades
 sudo apt-get clean $apt_opts
