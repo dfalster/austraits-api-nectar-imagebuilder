@@ -10,6 +10,8 @@ export DEBIAN_FRONTEND=noninteractive
 echo "debconf debconf/frontend select Noninteractive" | sudo debconf-set-selections
 
 sudo apt-get update $apt_opts
+sudo apt-get install $apt_opts apt-utils software-properties-common
+
 sudo apt-get dist-upgrade $apt_opts
 
 # This is to get a newer version (4.x) of r-base than in Ubuntu repos
@@ -25,4 +27,5 @@ sudo apt-get install $apt_opts --no-install-recommends \
     r-cran-tidyselect r-cran-assertthat r-cran-stringr r-cran-jsonlite \
     r-cran-httr r-cran-magrittr r-cran-readr r-cran-yaml
 
+sudo apt-get remove $apt_opts unattended-upgrades
 sudo apt-get clean $apt_opts
