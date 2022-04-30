@@ -1,4 +1,4 @@
-This uses Packer with the [OpenStack plugin](https://www.packer.io/plugins/builders/openstack) to automate interaction with Nectar to build a base image for deployment of [traitecoevo/austraits-api-nectar]([https://github.com/traitecoevo/austraits-api-nectar).
+This uses Packer with the [OpenStack plugin](https://www.packer.io/plugins/builders/openstack) to automate interaction with Nectar to build a base image for deployment of [traitecoevo/austraits-api-nectar](https://github.com/traitecoevo/austraits-api-nectar).
 
 To run locally:
 
