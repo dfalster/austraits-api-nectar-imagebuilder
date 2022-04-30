@@ -15,12 +15,17 @@ variable "ssh_username" {
     type = string
 }
 
+variable "image_name" {
+    type = string
+    default = "austraits-api-base-{{timestamp}}"
+}
+
 source "openstack" "austraits-api-base" {
     flavor = var.flavor
     source_image = var.source_image
     security_groups = [var.ssh_secgroup]
     ssh_username = var.ssh_username
-    image_name = "austraits-api-base-{{timestamp}}"
+    image_name = var.image_name
 }
 
 build {
