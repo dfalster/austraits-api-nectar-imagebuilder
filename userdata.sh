@@ -19,6 +19,9 @@ curl --silent https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc |
 sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 # This is to get newer versions of r-cran-* packages than in Ubuntu repos
 sudo add-apt-repository -y ppa:c2d4u.team/c2d4u4.0+
+# For Filebeat
+curl --silent https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+sudo add-apt-repository "deb https://artifacts.elastic.co/packages/8.x/apt stable main"
 
 sudo apt-get update $apt_opts
 sudo apt-get install $apt_opts --no-install-recommends `cat /tmp/packages.txt`
