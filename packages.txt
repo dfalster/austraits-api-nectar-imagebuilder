@@ -14,5 +14,9 @@ r-cran-httr
 r-cran-magrittr
 r-cran-readr
 r-cran-yaml
+r-cran-janitor
+r-cran-lifecycle
+r-cran-utils
+r-cran-stats
 nginx
 filebeat
